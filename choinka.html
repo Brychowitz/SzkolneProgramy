@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body style="font-family: Courier New">
+<form>
+  Wysokosc: <input id="wys">
+  <br><br>
+</form>
+	<button onclick="
+	var wysokosc = parseInt(document.getElementById('wys').value);
+	var html = '';
+
+	for(var i=0; i<wysokosc; i++){
+		for(var j=wysokosc-i; j>0; j--){
+			html += '&nbsp';
+		}
+		for(var j=1; j<=1+(2*i); j++){
+			html += '*';
+		}
+		html += '<br />';
+	}
+document.getElementById('wynik').innerHTML = html;
+">
+Rysuj
+</button>
+
+<div id="wynik">
+	</body>
+</html>
